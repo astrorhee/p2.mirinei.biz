@@ -16,6 +16,13 @@
     <input type='password' name='password'>
     <br><br>
 
-    <input type='submit' value='Sign up'>
+    <?php if(isset($error)): ?>
+        <div class='error'>
+            All fields are required.  Please sign up again.
+        </div>
+        <br>
+    <?php endif; ?>
+
+    <input type='submit' value='Sign Up!'>
 
 </form>

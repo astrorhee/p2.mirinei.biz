@@ -1,42 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title><?php if(isset($title)) echo $title; ?></title>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
-					
-	<!-- Controller Specific JS/CSS -->
-	<?php if(isset($client_files_head)) echo $client_files_head; ?>
-	
+<html>
+
+<head>
+    <title><?php if(isset($title)) echo $title; ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Common CSS/JSS -->
+    <link rel="stylesheet" href="/css/external.css" type="text/css">
+
+    <!-- Controller Specific CSS/JS -->
+    <?php if(isset($client_files_head)) echo $client_files_head; ?>
+
+
 </head>
 
-<body>	
+<body>
 
-   <div id='menu'>
 
-        <a href='/'>Home</a>
 
-        <!-- Menu for users who are logged in -->
+<div id="mainbody">
+
+<div class='window-outer'>
+
+
+<div id="header">
+    <div id="bannertext">
+        the Milky Way
+    </div>          
+    <img src="/images/banner.jpg" alt="banner" width="798" height="130" border="0" />
+</div>
+
+
+
+<div id="navbody">
+  <ul id="navmenu">
+        <li><a href='/'>Home</a><img src="/images/separator.png"></li>
+
         <?php if($user): ?>
+            <li><a href='/posts/add'>New Post</a>   <img src="/images/separator.png"></li>
+            <li><a href='/posts'>Posts</a>          <img src="/images/separator.png"></li>
+            <li><a href='/posts/users'>Bloggers</a> <img src="/images/separator.png"></li>
+            <li><a href='/users/profile'>Profile</a><img src="/images/separator.png"></li>
+            <li><a href='/users/logout'>Logout</a></li>
 
-            <a href='/users/logout'>Logout</a>
-            <a href='/users/profile'>Profile</a>
 
-        <!-- Menu options for users who are not logged in -->
         <?php else: ?>
-
-            <a href='/users/signup'>Sign up</a>
-            <a href='/users/login'>Log in</a>
+            <li><a href='/users/signup'>Sign up</a> <img src="/images/separator.png"></li>
+            <li><a href='/users/login'>Log in</a></li>
 
         <?php endif; ?>
 
-    </div>
+  </ul>
+</div>
 
-    <br>
+<br>
 
 	<?php if(isset($content)) echo $content; ?>
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
 
+</div>
+
+</div>
+
 </body>
+
 </html>
