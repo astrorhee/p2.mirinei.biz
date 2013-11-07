@@ -30,7 +30,7 @@
     <br><br>
 
     Bio<br>
-    <textarea name='bio' rows=8 cols=65><?=$user->bio?></textarea>
+    <textarea name='bio' rows=8 cols=70><?=$user->bio?></textarea>
     <br><br>
 </p>
 

@@ -6,7 +6,7 @@
 
 <p>
     <label for='content'>New Post:</label><br>
-    <textarea name='content' id='content' rows=12 cols=65></textarea>
+    <textarea name='content' id='content' rows=12 cols=70></textarea>
     <br><br>
     <input type='submit' value='New Post'>
 </p>
