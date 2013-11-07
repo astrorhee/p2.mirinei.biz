@@ -27,15 +27,15 @@
 
             <div id="navbody">
                 <ul id="navmenu">
-                    <li><a href='/'>Home</a><img src="/images/separator.png"></li>
+                    <li><a href='/'>Home</a><img src="/images/separator.png" alt="separator"></li>
                     <?php if($user): ?>
-                        <li><a href='/posts/add'>New Post</a>   <img src="/images/separator.png"></li>
-                        <li><a href='/posts'>Posts</a>          <img src="/images/separator.png"></li>
-                        <li><a href='/posts/users'>Bloggers</a> <img src="/images/separator.png"></li>
-                        <li><a href='/users/profile'>Profile</a><img src="/images/separator.png"></li>
+                        <li><a href='/posts/add'>New Post</a>   <img src="/images/separator.png" alt="separator"></li>
+                        <li><a href='/posts'>Posts</a>          <img src="/images/separator.png" alt="separator"></li>
+                        <li><a href='/posts/users'>Bloggers</a> <img src="/images/separator.png" alt="separator"></li>
+                        <li><a href='/users/profile'>Profile</a><img src="/images/separator.png" alt="separator"></li>
                         <li><a href='/users/logout'>Logout</a></li>
                     <?php else: ?>
-                        <li><a href='/users/signup'>Sign up</a> <img src="/images/separator.png"></li>
+                        <li><a href='/users/signup'>Sign up</a> <img src="/images/separator.png" alt="separator"></li>
                         <li><a href='/users/login'>Log in</a></li>
                     <?php endif; ?>
                 </ul>
