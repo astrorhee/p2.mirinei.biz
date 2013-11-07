@@ -22,7 +22,7 @@
     <br><br>
 
     Location<br>
-    <textarea name='location' rows=1 cols=38><?=$user->location?></textarea>
+    <textarea name='location' rows=1 cols=35><?=$user->location?></textarea>
     <br><br>
 
     Website<br>
@@ -30,7 +30,7 @@
     <br><br>
 
     Bio<br>
-    <textarea name='bio' rows=8 cols=80><?=$user->bio?></textarea>
+    <textarea name='bio' rows=8 cols=65><?=$user->bio?></textarea>
     <br><br>
 </p>
 
