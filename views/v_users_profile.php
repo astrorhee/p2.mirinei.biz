@@ -22,7 +22,7 @@
     <br><br>
 
     Location<br>
-    <input type='text' name='location' size=30 value=<?=$user->location?>>
+    <textarea name='location' rows=1 cols=38><?=$user->location?></textarea>
     <br><br>
 
     Website<br>
@@ -30,7 +30,7 @@
     <br><br>
 
     Bio<br>
-    <input type='text' name='bio' size=63 value=<?=$user->bio?>>
+    <textarea name='bio' rows=8 cols=80><?=$user->bio?></textarea>
     <br><br>
 </p>
 
