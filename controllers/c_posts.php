@@ -8,7 +8,7 @@ class posts_controller extends base_controller {
 
         // Make sure if user is logged in before they want to use anything in this controller.
         if(!$this->user) {
-            die("Members only.  Please log in. <a href='/users/login'>Login</a>");
+            die('Members only.  Please log in. <a href="/users/login">Login</a>');
         }
     }
 
