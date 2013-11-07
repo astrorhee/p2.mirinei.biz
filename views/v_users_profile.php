@@ -1,51 +1,48 @@
-<h1>This is the profile of <?=$user->first_name?></h1>
+<h2><?=$user->first_name?>'s Profile</h2>
+
+<p>Fill out your profile so that people know who you are!</p>
 
 <form method='POST' action='/users/p_profile'>
 
+<p>
     First Name<br>
-    <input type='text' name='first_name' value=<?=$user->first_name?>>
+    <input type='text' name='first_name' size=30 value=<?=$user->first_name?>>
     <br><br>
 
     Last Name<br>
-    <input type='text' name='last_name' value=<?=$user->last_name?>>
+    <input type='text' name='last_name' size=30 value=<?=$user->last_name?>>
     <br><br>
 
-    Email<br>
-    <input type='text' name='email' value=<?=$user->email?>>
+    Email Address<br>
+    <input type='text' name='email' size=30 value=<?=$user->email?>>
     <br><br>
 
     Password<br>
-    <input type='password' name='password'>
+    <input type='password' name='password' size=30>
     <br><br>
 
     Location<br>
-    <input type='text' name='location' value=<?=$user->location?>>
+    <input type='text' name='location' size=30 value=<?=$user->location?>>
     <br><br>
 
     Website<br>
-    <input type='text' name='website' value=<?=$user->website?>>
+    <input type='text' name='website' size=40 value=<?=$user->website?>>
     <br><br>
 
     Bio<br>
-    <input type='text' name='bio' value=<?=$user->bio?>>
+    <input type='text' name='bio' size=63 value=<?=$user->bio?>>
     <br><br>
+</p>
 
-    <?php if(isset($error)): ?>
-        <div class='error'>
-            First name, last name, and email address are required.
-        </div>
-        <br>
-    <?php endif; ?>
+<?php if(isset($error)): ?>
+    <div class='error'>
+        <p style="margin-top: -10px;"> First name, last name, and email address are required. </p>
+    </div>
+<?php endif; ?>
 
+<p style="margin-top: -10px;">
     <input type='submit' value='Update Profile'>
     <a href="/" style="text-decoration: none;"><input type="button" value="Cancel"></a>
+</p>
 
 </form>
-
-<!--
-<?php if(isset($user->first_name)): ?>
-    <h1>This is the profile for <?=$user->first_name?></h1>
-<?php else: ?>
-    <h1>No user specified</h1>
-<?php endif; ?>
---!>

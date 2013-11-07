@@ -12,58 +12,40 @@
     <!-- Controller Specific CSS/JS -->
     <?php if(isset($client_files_head)) echo $client_files_head; ?>
 
-
 </head>
 
 <body>
+    <div id="mainbody">
+        <div class='window-outer'>
+            
+            <div id="header">
+                <div id="bannertext">
+                    the Milky Way
+                </div>          
+                <img src="/images/banner.jpg" alt="banner" width="698" height="114" border="0" />
+            </div>
 
+            <div id="navbody">
+                <ul id="navmenu">
+                    <li><a href='/'>Home</a><img src="/images/separator.png"></li>
+                    <?php if($user): ?>
+                        <li><a href='/posts/add'>New Post</a>   <img src="/images/separator.png"></li>
+                        <li><a href='/posts'>Posts</a>          <img src="/images/separator.png"></li>
+                        <li><a href='/posts/users'>Bloggers</a> <img src="/images/separator.png"></li>
+                        <li><a href='/users/profile'>Profile</a><img src="/images/separator.png"></li>
+                        <li><a href='/users/logout'>Logout</a></li>
+                    <?php else: ?>
+                        <li><a href='/users/signup'>Sign up</a> <img src="/images/separator.png"></li>
+                        <li><a href='/users/login'>Log in</a></li>
+                    <?php endif; ?>
+                </ul>
+            </div>
 
+	        <?php if(isset($content)) echo $content; ?>
+	        <?php if(isset($client_files_body)) echo $client_files_body; ?>
 
-<div id="mainbody">
-
-<div class='window-outer'>
-
-
-<div id="header">
-    <div id="bannertext">
-        the Milky Way
-    </div>          
-    <img src="/images/banner.jpg" alt="banner" width="798" height="130" border="0" />
-</div>
-
-
-
-<div id="navbody">
-  <ul id="navmenu">
-        <li><a href='/'>Home</a><img src="/images/separator.png"></li>
-
-        <?php if($user): ?>
-            <li><a href='/posts/add'>New Post</a>   <img src="/images/separator.png"></li>
-            <li><a href='/posts'>Posts</a>          <img src="/images/separator.png"></li>
-            <li><a href='/posts/users'>Bloggers</a> <img src="/images/separator.png"></li>
-            <li><a href='/users/profile'>Profile</a><img src="/images/separator.png"></li>
-            <li><a href='/users/logout'>Logout</a></li>
-
-
-        <?php else: ?>
-            <li><a href='/users/signup'>Sign up</a> <img src="/images/separator.png"></li>
-            <li><a href='/users/login'>Log in</a></li>
-
-        <?php endif; ?>
-
-  </ul>
-</div>
-
-<br>
-
-	<?php if(isset($content)) echo $content; ?>
-
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
-
-</div>
-
-</div>
-
+        </div>
+    </div>
 </body>
 
 </html>

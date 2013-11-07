@@ -11,7 +11,7 @@ class index_controller extends base_controller {
 
         // Any method that loads a view will commonly start with the following.
         $this->template->content = View::instance('v_index_index');
-        $this->template->title   = "Hello World";
+        $this->template->title   = "CSCI E-15 :: Project 2 :: Jaehyon Rhee (Jay)";
 
         // CSS/JS includes
         /*
